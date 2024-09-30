@@ -1,5 +1,6 @@
 #include <acado_toolkit.hpp>
 #include <acado_gnuplot.hpp>
+#include <iostream>  // For printing the values
 
 USING_NAMESPACE_ACADO
 
@@ -71,14 +72,12 @@ int main() {
     RealTimeAlgorithm alg(ocp, 0.1);
     alg.set(MAX_NUM_ITERATIONS, 2);
 
-    // ** Define the Process: Wrap the system dynamics (f) into a Process **
+    // Define the Process: Wrap the system dynamics (f) into a Process
     Process process(f);
 
     // Simulation setup
     StaticReferenceTrajectory zeroReference;
     Controller controller(alg, zeroReference);
-
-    // ** Update SimulationEnvironment: Use the process and controller **
     SimulationEnvironment sim(0.0, 10.0, process, controller);
 
     // Initial state
@@ -87,19 +86,46 @@ int main() {
     x0(3) = 0.0; x0(4) = 0.0; x0(5) = 0.0;
 
     sim.init(x0);
-    sim.run();
+    
+    // Run the simulation
+    if (sim.run() == SUCCESSFUL_RETURN) {
+        // Store the output data
+        VariablesGrid output;
+        VariablesGrid control;
+        
+        // Get the sampled process output (state variables)
+        sim.getSampledProcessOutput(output);
 
-    // Plot the results
-    VariablesGrid output;
-    sim.getSampledProcessOutput(output);
-    GnuplotWindow window;
-    window.addSubplot(output(0), "X Position");
-    window.addSubplot(output(1), "Y Position");
-    window.addSubplot(output(2), "Orientation");
-    window.addSubplot(output(3), "X Velocity");
-    window.addSubplot(output(4), "Y Velocity");
-    window.addSubplot(output(5), "Angular Velocity");
-    window.plot();
+        // Get the feedback control (wheel velocities)
+        sim.getFeedbackControl(control);
+
+        // Print output values at every 5th iteration
+        for (int i = 0; i < output.getNumPoints(); ++i) {
+            if (i % 5 == 0) {  // Print every 5th iteration
+                double time = output.getTime(i);
+                DVector state = output.getVector(i);
+                DVector ctrl = control.getVector(i);
+
+                std::cout << "Iteration: " << i << " Time: " << time << "s\n";
+                std::cout << "State Values:\n";
+                std::cout << "  X Position: " << state(0) << "\n";
+                std::cout << "  Y Position: " << state(1) << "\n";
+                std::cout << "  Orientation (Theta): " << state(2) << "\n";
+                std::cout << "  X Velocity: " << state(3) << "\n";
+                std::cout << "  Y Velocity: " << state(4) << "\n";
+                std::cout << "  Angular Velocity: " << state(5) << "\n";
+
+                std::cout << "Control Inputs (Wheel Velocities):\n";
+                std::cout << "  u1: " << ctrl(0) << "\n";
+                std::cout << "  u2: " << ctrl(1) << "\n";
+                std::cout << "  u3: " << ctrl(2) << "\n";
+                std::cout << "  u4: " << ctrl(3) << "\n";
+                std::cout << "----------------------------------------\n";
+            }
+        }
+    } else {
+        std::cerr << "Simulation failed.\n";
+    }
 
     return 0;
 }
