@@ -22,7 +22,6 @@ cd build
 cmake ..
 make
 sudo make install
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ```
 You may follow acado/examples/getting_started for examples of Acado library
 
@@ -33,5 +32,6 @@ mkdir build
 cd build
 cmake ..
 make
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ./nmpc_controller
 ```
