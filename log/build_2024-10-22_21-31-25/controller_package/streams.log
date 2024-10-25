@@ -1,0 +1,25 @@
+[0.030s] Invoking command in '/home/debraj/Documents/controller/build/controller_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/debraj/Documents/controller/build/controller_package -- -j8 -l8
+[0.233s] [ 50%] [32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o[0m
+[19.718s] [100%] [32m[1mLinking CXX executable controller[0m
+[22.266s] [100%] Built target controller
+[22.304s] Invoked command in '/home/debraj/Documents/controller/build/controller_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/debraj/Documents/controller/build/controller_package -- -j8 -l8
+[22.349s] Invoking command in '/home/debraj/Documents/controller/build/controller_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/debraj/Documents/controller/build/controller_package
+[22.358s] -- Install configuration: ""
+[22.359s] -- Installing: /home/debraj/Documents/controller/install/controller_package/lib/controller_package/controller
+[22.367s] -- Set non-toolchain portion of runtime path of "/home/debraj/Documents/controller/install/controller_package/lib/controller_package/controller" to ""
+[22.368s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/package_run_dependencies/controller_package
+[22.368s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/parent_prefix_path/controller_package
+[22.368s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.sh
+[22.368s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.dsv
+[22.368s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/path.sh
+[22.368s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/path.dsv
+[22.369s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.bash
+[22.369s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.sh
+[22.369s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.zsh
+[22.369s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.dsv
+[22.369s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/package.dsv
+[22.369s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/packages/controller_package
+[22.369s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig.cmake
+[22.369s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig-version.cmake
+[22.369s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/package.xml
+[22.371s] Invoked command in '/home/debraj/Documents/controller/build/controller_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/debraj/Documents/controller/build/controller_package

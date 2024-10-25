@@ -1,0 +1,22 @@
+[0.033s] Invoking command in '/home/debraj/Documents/controller/build/controller_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/debraj/Documents/controller/build/controller_package -- -j8 -l8
+[0.242s] [100%] Built target controller
+[0.275s] Invoked command in '/home/debraj/Documents/controller/build/controller_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/debraj/Documents/controller/build/controller_package -- -j8 -l8
+[0.378s] Invoking command in '/home/debraj/Documents/controller/build/controller_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/debraj/Documents/controller/build/controller_package
+[0.396s] -- Install configuration: ""
+[0.397s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/lib/controller_package/controller
+[0.397s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/package_run_dependencies/controller_package
+[0.397s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/parent_prefix_path/controller_package
+[0.398s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.sh
+[0.398s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.dsv
+[0.398s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/path.sh
+[0.398s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/path.dsv
+[0.398s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.bash
+[0.399s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.sh
+[0.399s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.zsh
+[0.399s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.dsv
+[0.400s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/package.dsv
+[0.400s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/packages/controller_package
+[0.400s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig.cmake
+[0.400s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig-version.cmake
+[0.401s] -- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/package.xml
+[0.407s] Invoked command in '/home/debraj/Documents/controller/build/controller_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/debraj/Documents/controller/build/controller_package

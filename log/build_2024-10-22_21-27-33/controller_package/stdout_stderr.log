@@ -1,0 +1,22 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o[0m
+[01m[K/home/debraj/Documents/controller/src/controller_package/src/controller.cpp:30:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kf[m[K’ does not name a type
+   30 | [01;31m[Kf[m[K << dot(x) == vx;
+      | [01;31m[K^[m[K
+[01m[K/home/debraj/Documents/controller/src/controller_package/src/controller.cpp:31:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kf[m[K’ does not name a type
+   31 | [01;31m[Kf[m[K << dot(y) == vy;
+      | [01;31m[K^[m[K
+[01m[K/home/debraj/Documents/controller/src/controller_package/src/controller.cpp:32:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kf[m[K’ does not name a type
+   32 | [01;31m[Kf[m[K << dot(theta) == omega;
+      | [01;31m[K^[m[K
+[01m[K/home/debraj/Documents/controller/src/controller_package/src/controller.cpp:33:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kf[m[K’ does not name a type
+   33 | [01;31m[Kf[m[K << dot(vx) == ax;
+      | [01;31m[K^[m[K
+[01m[K/home/debraj/Documents/controller/src/controller_package/src/controller.cpp:34:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kf[m[K’ does not name a type
+   34 | [01;31m[Kf[m[K << dot(vy) == ay;
+      | [01;31m[K^[m[K
+[01m[K/home/debraj/Documents/controller/src/controller_package/src/controller.cpp:35:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kf[m[K’ does not name a type
+   35 | [01;31m[Kf[m[K << dot(omega) == alpha;
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/controller.dir/build.make:76: CMakeFiles/controller.dir/src/controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

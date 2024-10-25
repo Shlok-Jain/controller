@@ -1,0 +1,56 @@
+[0.029s] Invoking command in '/home/debraj/Documents/controller/build/controller_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/debraj/Documents/controller/src/controller_package -DCMAKE_INSTALL_PREFIX=/home/debraj/Documents/controller/install/controller_package
+[0.216s] -- The C compiler identification is GNU 13.2.0
+[0.424s] -- The CXX compiler identification is GNU 13.2.0
+[0.465s] -- Detecting C compiler ABI info
+[0.678s] -- Detecting C compiler ABI info - done
+[0.703s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.704s] -- Detecting C compile features
+[0.706s] -- Detecting C compile features - done
+[0.730s] -- Detecting CXX compiler ABI info
+[0.959s] -- Detecting CXX compiler ABI info - done
+[0.978s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.978s] -- Detecting CXX compile features
+[0.979s] -- Detecting CXX compile features - done
+[0.999s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.302s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.551s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.667s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.699s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.745s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.788s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.983s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.991s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.207s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.246s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.292s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.465s] -- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)
+[2.501s] -- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[2.715s] -- Configuring done (2.7s)
+[2.737s] -- Generating done (0.0s)
+[2.740s] -- Build files have been written to: /home/debraj/Documents/controller/build/controller_package
+[2.756s] Invoked command in '/home/debraj/Documents/controller/build/controller_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/debraj/Documents/controller/src/controller_package -DCMAKE_INSTALL_PREFIX=/home/debraj/Documents/controller/install/controller_package
+[2.758s] Invoking command in '/home/debraj/Documents/controller/build/controller_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/debraj/Documents/controller/build/controller_package -- -j8 -l8
+[2.866s] [ 50%] [32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o[0m
+[15.334s] [100%] [32m[1mLinking CXX executable controller[0m
+[15.808s] [100%] Built target controller
+[15.823s] Invoked command in '/home/debraj/Documents/controller/build/controller_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/debraj/Documents/controller/build/controller_package -- -j8 -l8
+[15.866s] Invoking command in '/home/debraj/Documents/controller/build/controller_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/debraj/Documents/controller/build/controller_package
+[15.880s] -- Install configuration: ""
+[15.881s] -- Installing: /home/debraj/Documents/controller/install/controller_package/lib/controller_package/controller
+[15.887s] -- Set non-toolchain portion of runtime path of "/home/debraj/Documents/controller/install/controller_package/lib/controller_package/controller" to ""
+[15.887s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/package_run_dependencies/controller_package
+[15.887s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/parent_prefix_path/controller_package
+[15.888s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.sh
+[15.888s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.dsv
+[15.888s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/path.sh
+[15.889s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/path.dsv
+[15.889s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.bash
+[15.889s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.sh
+[15.889s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.zsh
+[15.890s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.dsv
+[15.890s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/package.dsv
+[15.890s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/packages/controller_package
+[15.891s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig.cmake
+[15.891s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig-version.cmake
+[15.891s] -- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/package.xml
+[15.894s] Invoked command in '/home/debraj/Documents/controller/build/controller_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/debraj/Documents/controller/build/controller_package

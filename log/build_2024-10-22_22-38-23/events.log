@@ -1,0 +1,257 @@
+[0.000000] (-) TimerEvent: {}
+[0.001794] (controller_package) JobQueued: {'identifier': 'controller_package', 'dependencies': OrderedDict()}
+[0.001868] (controller_package) JobStarted: {'identifier': 'controller_package'}
+[0.030341] (controller_package) JobProgress: {'identifier': 'controller_package', 'progress': 'cmake'}
+[0.032642] (controller_package) JobProgress: {'identifier': 'controller_package', 'progress': 'build'}
+[0.033774] (controller_package) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/debraj/Documents/controller/build/controller_package', '--', '-j8', '-l8'], 'cwd': '/home/debraj/Documents/controller/build/controller_package', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'debraj', 'XDG_SESSION_TYPE': 'wayland', 'ACADO_ENV_QPOASES_EMBEDDED_INC_DIRS': '/home/debraj/acado/external_packages/qpoases/;/home/debraj/acado/external_packages/qpoases/INCLUDE;/home/debraj/acado/external_packages/qpoases/SRC', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/debraj/Documents/Webots-Ros2-Omniwheel-Simulation/install/my_package/lib:/usr/local/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/debraj', 'OLDPWD': '/home/debraj/Documents/controller/src/controller_package', 'DESKTOP_SESSION': 'ubuntu', 'ACADO_ENV_SHARED_LIBRARIES': 'acado_toolkit_s', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'ACADO_ENV_LIBRARY_DIRS': '/home/debraj/acado/build/lib', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ACADO_ENV_QPOASES_EMBEDDED_SOURCES': '/home/debraj/acado/external_packages/qpoases/SRC/Bounds.cpp;/home/debraj/acado/external_packages/qpoases/SRC/CyclingManager.cpp;/home/debraj/acado/external_packages/qpoases/SRC/MessageHandling.cpp;/home/debraj/acado/external_packages/qpoases/SRC/QProblem.cpp;/home/debraj/acado/external_packages/qpoases/SRC/Utils.cpp;/home/debraj/acado/external_packages/qpoases/SRC/Constraints.cpp;/home/debraj/acado/external_packages/qpoases/SRC/Indexlist.cpp;/home/debraj/acado/external_packages/qpoases/SRC/QProblemB.cpp;/home/debraj/acado/external_packages/qpoases/SRC/SubjectTo.cpp;/home/debraj/acado/external_packages/qpoases/SRC/EXTRAS/SolutionAnalysis.cpp', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'ACADO_ENV_EXTERNAL_PACKAGES_DIR': '/home/debraj/acado/external_packages', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/debraj/Documents/Webots-Ros2-Omniwheel-Simulation/install:/home/debraj/Documents/controller/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'debraj', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'debraj', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/home/debraj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/debraj-Lenovo-V15-G2-ALC-Ua:@/tmp/.ICE-unix/2146,unix/debraj-Lenovo-V15-G2-ALC-Ua:/tmp/.ICE-unix/2146', 'ACADO_ENV_CMAKE_DIR': '/home/debraj/acado/cmake', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/6cd9eda9_7cb9_4185_956c_791f199b277c', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ACADO_ENV_STATIC_LIBRARIES': '', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.Q1YZV2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.141', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/debraj/Documents/Webots-Ros2-Omniwheel-Simulation/install/my_package:/home/debraj/Documents/controller/install/controller_package:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/debraj/Documents/controller/build/controller_package', 'ACADO_ENV_INCLUDE_DIRS': '/home/debraj/acado;/home/debraj/acado/acado;/home/debraj/acado/external_packages;/home/debraj/acado/external_packages/qpOASES-3.2.0/include;/home/debraj/acado/build', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/debraj/Documents/Webots-Ros2-Omniwheel-Simulation/install/my_package:/home/debraj/Documents/controller/install/controller_package:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099437] (-) TimerEvent: {}
+[0.199982] (-) TimerEvent: {}
+[0.213924] (controller_package) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o\x1b[0m\n'}
+[0.300275] (-) TimerEvent: {}
+[0.401079] (-) TimerEvent: {}
+[0.501832] (-) TimerEvent: {}
+[0.602944] (-) TimerEvent: {}
+[0.704150] (-) TimerEvent: {}
+[0.804999] (-) TimerEvent: {}
+[0.905711] (-) TimerEvent: {}
+[1.006333] (-) TimerEvent: {}
+[1.107020] (-) TimerEvent: {}
+[1.207428] (-) TimerEvent: {}
+[1.307881] (-) TimerEvent: {}
+[1.408511] (-) TimerEvent: {}
+[1.509347] (-) TimerEvent: {}
+[1.609875] (-) TimerEvent: {}
+[1.710246] (-) TimerEvent: {}
+[1.810755] (-) TimerEvent: {}
+[1.911421] (-) TimerEvent: {}
+[2.012393] (-) TimerEvent: {}
+[2.113534] (-) TimerEvent: {}
+[2.214256] (-) TimerEvent: {}
+[2.315510] (-) TimerEvent: {}
+[2.416295] (-) TimerEvent: {}
+[2.516960] (-) TimerEvent: {}
+[2.617577] (-) TimerEvent: {}
+[2.718255] (-) TimerEvent: {}
+[2.818852] (-) TimerEvent: {}
+[2.919650] (-) TimerEvent: {}
+[3.020088] (-) TimerEvent: {}
+[3.120799] (-) TimerEvent: {}
+[3.221884] (-) TimerEvent: {}
+[3.322623] (-) TimerEvent: {}
+[3.423113] (-) TimerEvent: {}
+[3.523904] (-) TimerEvent: {}
+[3.624564] (-) TimerEvent: {}
+[3.725550] (-) TimerEvent: {}
+[3.826275] (-) TimerEvent: {}
+[3.926693] (-) TimerEvent: {}
+[4.027181] (-) TimerEvent: {}
+[4.128054] (-) TimerEvent: {}
+[4.228944] (-) TimerEvent: {}
+[4.329596] (-) TimerEvent: {}
+[4.430241] (-) TimerEvent: {}
+[4.531136] (-) TimerEvent: {}
+[4.631854] (-) TimerEvent: {}
+[4.732656] (-) TimerEvent: {}
+[4.833747] (-) TimerEvent: {}
+[4.934691] (-) TimerEvent: {}
+[5.035353] (-) TimerEvent: {}
+[5.135796] (-) TimerEvent: {}
+[5.236433] (-) TimerEvent: {}
+[5.337239] (-) TimerEvent: {}
+[5.437743] (-) TimerEvent: {}
+[5.538365] (-) TimerEvent: {}
+[5.639252] (-) TimerEvent: {}
+[5.739873] (-) TimerEvent: {}
+[5.840325] (-) TimerEvent: {}
+[5.941064] (-) TimerEvent: {}
+[6.042075] (-) TimerEvent: {}
+[6.142542] (-) TimerEvent: {}
+[6.243190] (-) TimerEvent: {}
+[6.344130] (-) TimerEvent: {}
+[6.445080] (-) TimerEvent: {}
+[6.545918] (-) TimerEvent: {}
+[6.646418] (-) TimerEvent: {}
+[6.747009] (-) TimerEvent: {}
+[6.848208] (-) TimerEvent: {}
+[6.949129] (-) TimerEvent: {}
+[7.049942] (-) TimerEvent: {}
+[7.150889] (-) TimerEvent: {}
+[7.251935] (-) TimerEvent: {}
+[7.352679] (-) TimerEvent: {}
+[7.453118] (-) TimerEvent: {}
+[7.553663] (-) TimerEvent: {}
+[7.654703] (-) TimerEvent: {}
+[7.755376] (-) TimerEvent: {}
+[7.856522] (-) TimerEvent: {}
+[7.959933] (-) TimerEvent: {}
+[8.060563] (-) TimerEvent: {}
+[8.161254] (-) TimerEvent: {}
+[8.261984] (-) TimerEvent: {}
+[8.362556] (-) TimerEvent: {}
+[8.463599] (-) TimerEvent: {}
+[8.564597] (-) TimerEvent: {}
+[8.665346] (-) TimerEvent: {}
+[8.766053] (-) TimerEvent: {}
+[8.866782] (-) TimerEvent: {}
+[8.967368] (-) TimerEvent: {}
+[9.068124] (-) TimerEvent: {}
+[9.169181] (-) TimerEvent: {}
+[9.270356] (-) TimerEvent: {}
+[9.371061] (-) TimerEvent: {}
+[9.471869] (-) TimerEvent: {}
+[9.572713] (-) TimerEvent: {}
+[9.673497] (-) TimerEvent: {}
+[9.773896] (-) TimerEvent: {}
+[9.874382] (-) TimerEvent: {}
+[9.975201] (-) TimerEvent: {}
+[10.076158] (-) TimerEvent: {}
+[10.177037] (-) TimerEvent: {}
+[10.277853] (-) TimerEvent: {}
+[10.378255] (-) TimerEvent: {}
+[10.478666] (-) TimerEvent: {}
+[10.579064] (-) TimerEvent: {}
+[10.679632] (-) TimerEvent: {}
+[10.780551] (-) TimerEvent: {}
+[10.881518] (-) TimerEvent: {}
+[10.982777] (-) TimerEvent: {}
+[11.083693] (-) TimerEvent: {}
+[11.184810] (-) TimerEvent: {}
+[11.285465] (-) TimerEvent: {}
+[11.385974] (-) TimerEvent: {}
+[11.486475] (-) TimerEvent: {}
+[11.587146] (-) TimerEvent: {}
+[11.688189] (-) TimerEvent: {}
+[11.789184] (-) TimerEvent: {}
+[11.890261] (-) TimerEvent: {}
+[11.991273] (-) TimerEvent: {}
+[12.092031] (-) TimerEvent: {}
+[12.192805] (-) TimerEvent: {}
+[12.293642] (-) TimerEvent: {}
+[12.394457] (-) TimerEvent: {}
+[12.495279] (-) TimerEvent: {}
+[12.596002] (-) TimerEvent: {}
+[12.696750] (-) TimerEvent: {}
+[12.797692] (-) TimerEvent: {}
+[12.898380] (-) TimerEvent: {}
+[12.999190] (-) TimerEvent: {}
+[13.100036] (-) TimerEvent: {}
+[13.200731] (-) TimerEvent: {}
+[13.301772] (-) TimerEvent: {}
+[13.402932] (-) TimerEvent: {}
+[13.503591] (-) TimerEvent: {}
+[13.604582] (-) TimerEvent: {}
+[13.705317] (-) TimerEvent: {}
+[13.806198] (-) TimerEvent: {}
+[13.906799] (-) TimerEvent: {}
+[14.007391] (-) TimerEvent: {}
+[14.108794] (-) TimerEvent: {}
+[14.209921] (-) TimerEvent: {}
+[14.310977] (-) TimerEvent: {}
+[14.411579] (-) TimerEvent: {}
+[14.512239] (-) TimerEvent: {}
+[14.612938] (-) TimerEvent: {}
+[14.713959] (-) TimerEvent: {}
+[14.814669] (-) TimerEvent: {}
+[14.915591] (-) TimerEvent: {}
+[15.016555] (-) TimerEvent: {}
+[15.117502] (-) TimerEvent: {}
+[15.218424] (-) TimerEvent: {}
+[15.319565] (-) TimerEvent: {}
+[15.420200] (-) TimerEvent: {}
+[15.520791] (-) TimerEvent: {}
+[15.621715] (-) TimerEvent: {}
+[15.722650] (-) TimerEvent: {}
+[15.823279] (-) TimerEvent: {}
+[15.924383] (-) TimerEvent: {}
+[16.025310] (-) TimerEvent: {}
+[16.126341] (-) TimerEvent: {}
+[16.227159] (-) TimerEvent: {}
+[16.327863] (-) TimerEvent: {}
+[16.428564] (-) TimerEvent: {}
+[16.529530] (-) TimerEvent: {}
+[16.630140] (-) TimerEvent: {}
+[16.730933] (-) TimerEvent: {}
+[16.831934] (-) TimerEvent: {}
+[16.933191] (-) TimerEvent: {}
+[17.034191] (-) TimerEvent: {}
+[17.134568] (-) TimerEvent: {}
+[17.234989] (-) TimerEvent: {}
+[17.335440] (-) TimerEvent: {}
+[17.435934] (-) TimerEvent: {}
+[17.536603] (-) TimerEvent: {}
+[17.637261] (-) TimerEvent: {}
+[17.738050] (-) TimerEvent: {}
+[17.839025] (-) TimerEvent: {}
+[17.939848] (-) TimerEvent: {}
+[18.040473] (-) TimerEvent: {}
+[18.141318] (-) TimerEvent: {}
+[18.245592] (-) TimerEvent: {}
+[18.347531] (-) TimerEvent: {}
+[18.448017] (-) TimerEvent: {}
+[18.459107] (controller_package) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable controller\x1b[0m\n'}
+[18.550183] (-) TimerEvent: {}
+[18.654919] (-) TimerEvent: {}
+[18.755604] (-) TimerEvent: {}
+[18.856703] (-) TimerEvent: {}
+[18.957668] (-) TimerEvent: {}
+[19.058736] (-) TimerEvent: {}
+[19.159899] (-) TimerEvent: {}
+[19.260736] (-) TimerEvent: {}
+[19.361744] (-) TimerEvent: {}
+[19.462786] (-) TimerEvent: {}
+[19.563699] (-) TimerEvent: {}
+[19.664762] (-) TimerEvent: {}
+[19.765799] (-) TimerEvent: {}
+[19.866784] (-) TimerEvent: {}
+[19.968097] (-) TimerEvent: {}
+[20.068754] (-) TimerEvent: {}
+[20.169660] (-) TimerEvent: {}
+[20.270572] (-) TimerEvent: {}
+[20.371912] (-) TimerEvent: {}
+[20.472925] (-) TimerEvent: {}
+[20.573858] (-) TimerEvent: {}
+[20.674913] (-) TimerEvent: {}
+[20.775824] (-) TimerEvent: {}
+[20.876541] (-) TimerEvent: {}
+[20.977438] (-) TimerEvent: {}
+[21.078190] (-) TimerEvent: {}
+[21.179144] (-) TimerEvent: {}
+[21.280014] (-) TimerEvent: {}
+[21.380909] (-) TimerEvent: {}
+[21.481969] (-) TimerEvent: {}
+[21.582925] (-) TimerEvent: {}
+[21.683803] (-) TimerEvent: {}
+[21.784450] (-) TimerEvent: {}
+[21.885129] (-) TimerEvent: {}
+[21.985915] (-) TimerEvent: {}
+[22.086501] (-) TimerEvent: {}
+[22.187388] (-) TimerEvent: {}
+[22.288282] (-) TimerEvent: {}
+[22.388886] (-) TimerEvent: {}
+[22.451976] (controller_package) StdoutLine: {'line': b'[100%] Built target controller\n'}
+[22.478954] (controller_package) CommandEnded: {'returncode': 0}
+[22.489136] (-) TimerEvent: {}
+[22.532375] (controller_package) JobProgress: {'identifier': 'controller_package', 'progress': 'install'}
+[22.552455] (controller_package) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/debraj/Documents/controller/build/controller_package'], 'cwd': '/home/debraj/Documents/controller/build/controller_package', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'debraj', 'XDG_SESSION_TYPE': 'wayland', 'ACADO_ENV_QPOASES_EMBEDDED_INC_DIRS': '/home/debraj/acado/external_packages/qpoases/;/home/debraj/acado/external_packages/qpoases/INCLUDE;/home/debraj/acado/external_packages/qpoases/SRC', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/debraj/Documents/Webots-Ros2-Omniwheel-Simulation/install/my_package/lib:/usr/local/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/debraj', 'OLDPWD': '/home/debraj/Documents/controller/src/controller_package', 'DESKTOP_SESSION': 'ubuntu', 'ACADO_ENV_SHARED_LIBRARIES': 'acado_toolkit_s', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'ACADO_ENV_LIBRARY_DIRS': '/home/debraj/acado/build/lib', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ACADO_ENV_QPOASES_EMBEDDED_SOURCES': '/home/debraj/acado/external_packages/qpoases/SRC/Bounds.cpp;/home/debraj/acado/external_packages/qpoases/SRC/CyclingManager.cpp;/home/debraj/acado/external_packages/qpoases/SRC/MessageHandling.cpp;/home/debraj/acado/external_packages/qpoases/SRC/QProblem.cpp;/home/debraj/acado/external_packages/qpoases/SRC/Utils.cpp;/home/debraj/acado/external_packages/qpoases/SRC/Constraints.cpp;/home/debraj/acado/external_packages/qpoases/SRC/Indexlist.cpp;/home/debraj/acado/external_packages/qpoases/SRC/QProblemB.cpp;/home/debraj/acado/external_packages/qpoases/SRC/SubjectTo.cpp;/home/debraj/acado/external_packages/qpoases/SRC/EXTRAS/SolutionAnalysis.cpp', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'ACADO_ENV_EXTERNAL_PACKAGES_DIR': '/home/debraj/acado/external_packages', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/debraj/Documents/Webots-Ros2-Omniwheel-Simulation/install:/home/debraj/Documents/controller/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'debraj', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'debraj', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/home/debraj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/debraj-Lenovo-V15-G2-ALC-Ua:@/tmp/.ICE-unix/2146,unix/debraj-Lenovo-V15-G2-ALC-Ua:/tmp/.ICE-unix/2146', 'ACADO_ENV_CMAKE_DIR': '/home/debraj/acado/cmake', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/6cd9eda9_7cb9_4185_956c_791f199b277c', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'ACADO_ENV_STATIC_LIBRARIES': '', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.Q1YZV2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.141', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/debraj/Documents/Webots-Ros2-Omniwheel-Simulation/install/my_package:/home/debraj/Documents/controller/install/controller_package:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/debraj/Documents/controller/build/controller_package', 'ACADO_ENV_INCLUDE_DIRS': '/home/debraj/acado;/home/debraj/acado/acado;/home/debraj/acado/external_packages;/home/debraj/acado/external_packages/qpOASES-3.2.0/include;/home/debraj/acado/build', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/debraj/Documents/Webots-Ros2-Omniwheel-Simulation/install/my_package:/home/debraj/Documents/controller/install/controller_package:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[22.571132] (controller_package) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[22.572197] (controller_package) StdoutLine: {'line': b'-- Installing: /home/debraj/Documents/controller/install/controller_package/lib/controller_package/controller\n'}
+[22.585172] (controller_package) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/debraj/Documents/controller/install/controller_package/lib/controller_package/controller" to ""\n'}
+[22.585873] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/package_run_dependencies/controller_package\n'}
+[22.586143] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/parent_prefix_path/controller_package\n'}
+[22.586550] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.sh\n'}
+[22.586741] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.dsv\n'}
+[22.586843] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/path.sh\n'}
+[22.586939] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/environment/path.dsv\n'}
+[22.587032] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.bash\n'}
+[22.587125] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.sh\n'}
+[22.587219] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.zsh\n'}
+[22.587313] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/local_setup.dsv\n'}
+[22.587445] (controller_package) StdoutLine: {'line': b'-- Installing: /home/debraj/Documents/controller/install/controller_package/share/controller_package/package.dsv\n'}
+[22.587555] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/ament_index/resource_index/packages/controller_package\n'}
+[22.587657] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig.cmake\n'}
+[22.587756] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig-version.cmake\n'}
+[22.587857] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/debraj/Documents/controller/install/controller_package/share/controller_package/package.xml\n'}
+[22.589226] (-) TimerEvent: {}
+[22.591050] (controller_package) CommandEnded: {'returncode': 0}
+[22.666622] (controller_package) JobEnded: {'identifier': 'controller_package', 'rc': 0}
+[22.668209] (-) EventReactorShutdown: {}

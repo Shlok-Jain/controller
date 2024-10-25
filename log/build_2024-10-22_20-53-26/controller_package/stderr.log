@@ -1,0 +1,4 @@
+[01m[K/home/debraj/Documents/controller/src/controller_package/src/controller.cpp:[m[K In member function ‘[01m[Kvoid MyRobotNode::[01;32m[Kcallback_2[m[K(std_msgs::msg::Float32MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/debraj/Documents/controller/src/controller_package/src/controller.cpp:44:71:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   44 |     void callback_2([01;35m[Kconst std_msgs::msg::Float32MultiArray::SharedPtr msg[m[K)
+      |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K

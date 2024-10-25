@@ -1,0 +1,8 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o[0m
+[01m[K/home/debraj/Documents/controller/src/controller_package/src/controller.cpp:74:28:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+   74 |     DifferentialEquation f([01;31m[K0.0[m[K, dt);
+      |                            [01;31m[K^~~[m[K
+[01m[K/home/debraj/Documents/controller/src/controller_package/src/controller.cpp:74:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+gmake[2]: *** [CMakeFiles/controller.dir/build.make:76: CMakeFiles/controller.dir/src/controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
