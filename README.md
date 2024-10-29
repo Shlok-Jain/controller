@@ -28,10 +28,7 @@ You may follow acado/examples/getting_started for examples of Acado library
 ## Build and run the code:
 ```bash
 cd model_predictive_control
-mkdir build
-cd build
-cmake ..
-make
+colcon build
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-./nmpc_controller
+ros2 run controller_package controller
 ```
