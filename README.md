@@ -29,6 +29,7 @@ You may follow acado/examples/getting_started for examples of Acado library
 ```bash
 cd model_predictive_control
 colcon build
+source install/local_setup.bash
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ros2 run controller_package controller
 ```
