@@ -60,14 +60,14 @@ int main() {
         ocp.subjectTo(AT_START, omega == current_omega);
 
         // Final state constraints towards target (moving only in x-direction)
-        ocp.subjectTo(AT_END, x == 1.0);   // Target position in x
+        ocp.subjectTo(AT_END, x == 0.0);   // Target position in x
         ocp.subjectTo(AT_END, vx == 0.0);       // Stop at the target
-        ocp.subjectTo(AT_END, y == 0.0);
+        ocp.subjectTo(AT_END, y == 1.0);
         ocp.subjectTo(AT_END, theta == 0.0);
         ocp.subjectTo(AT_END, vy == 0.0);
         ocp.subjectTo(AT_END, omega == 0.0);
 
-        // Solver setup
+        // Solver setup 
         OptimizationAlgorithm algorithm(ocp);
         algorithm.set(PRINTLEVEL, LOW);
 

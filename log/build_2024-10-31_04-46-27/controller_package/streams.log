@@ -1,0 +1,25 @@
+[0.013s] Invoking command in '/home/aruz/Final_Motion/controller/build/controller_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/aruz/Final_Motion/controller/build/controller_package -- -j24 -l24
+[0.148s] [ 50%] [32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o[0m
+[11.240s] [100%] [32m[1mLinking CXX executable controller[0m
+[11.968s] [100%] Built target controller
+[11.986s] Invoked command in '/home/aruz/Final_Motion/controller/build/controller_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/aruz/Final_Motion/controller/build/controller_package -- -j24 -l24
+[12.050s] Invoking command in '/home/aruz/Final_Motion/controller/build/controller_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/aruz/Final_Motion/controller/build/controller_package
+[12.059s] -- Install configuration: ""
+[12.060s] -- Installing: /home/aruz/Final_Motion/controller/install/controller_package/lib/controller_package/controller
+[12.066s] -- Set non-toolchain portion of runtime path of "/home/aruz/Final_Motion/controller/install/controller_package/lib/controller_package/controller" to ""
+[12.066s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/ament_index/resource_index/package_run_dependencies/controller_package
+[12.066s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/ament_index/resource_index/parent_prefix_path/controller_package
+[12.066s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.sh
+[12.066s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.dsv
+[12.066s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/environment/path.sh
+[12.066s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/environment/path.dsv
+[12.066s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/local_setup.bash
+[12.067s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/local_setup.sh
+[12.067s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/local_setup.zsh
+[12.067s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/local_setup.dsv
+[12.067s] -- Installing: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/package.dsv
+[12.067s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/ament_index/resource_index/packages/controller_package
+[12.067s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig.cmake
+[12.067s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig-version.cmake
+[12.067s] -- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/package.xml
+[12.069s] Invoked command in '/home/aruz/Final_Motion/controller/build/controller_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/aruz/Final_Motion/controller/build/controller_package

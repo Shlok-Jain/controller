@@ -1,0 +1,216 @@
+[0.000000] (-) TimerEvent: {}
+[0.001430] (controller_package) JobQueued: {'identifier': 'controller_package', 'dependencies': OrderedDict()}
+[0.001606] (controller_package) JobStarted: {'identifier': 'controller_package'}
+[0.016002] (controller_package) JobProgress: {'identifier': 'controller_package', 'progress': 'cmake'}
+[0.017764] (controller_package) JobProgress: {'identifier': 'controller_package', 'progress': 'build'}
+[0.017946] (controller_package) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/aruz/Final_Motion/controller/build/controller_package', '--', '-j24', '-l24'], 'cwd': '/home/aruz/Final_Motion/controller/build/controller_package', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'aruz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/aruz/webots_ws/install/my_package/lib:/home/aruz/ros2_ws/install/turtlesim/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/aruz/.ros/webotsR2023b/webots/lib/controller:/opt/ros/jazzy/lib/controller', 'HOME': '/home/aruz', 'OLDPWD': '/home/aruz', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3031', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/aruz/Final_Motion/controller/install:/home/aruz/webots_ws/install:/home/aruz/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'aruz', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'aruz', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aruz-OMEN-by-HP-Gaming-Laptop-16-wf1xxx:@/tmp/.ICE-unix/2782,unix/aruz-OMEN-by-HP-Gaming-Laptop-16-wf1xxx:/tmp/.ICE-unix/2782', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c82a392d_6104_4bc0_8453_2b8a7c4be3dc', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.128', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/aruz/Final_Motion/controller/install/controller_package:/home/aruz/webots_ws/install/my_package:/home/aruz/ros2_ws/install/turtlesim:/home/aruz/ros2_ws/install/trial_pkg:/home/aruz/ros2_ws/install/my_package:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'WEBOTS_HOME': '/home/aruz/.ros/webotsR2023b/webots/', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/aruz/Final_Motion/controller/build/controller_package', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/aruz/ros2_ws/install/turtlesim/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/aruz/Final_Motion/controller/install/controller_package:/home/aruz/webots_ws/install/my_package:/home/aruz/ros2_ws/install/turtlesim:/home/aruz/ros2_ws/install/trial_pkg:/home/aruz/ros2_ws/install/my_package:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.098988] (-) TimerEvent: {}
+[0.174395] (controller_package) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o\x1b[0m\n'}
+[0.199201] (-) TimerEvent: {}
+[0.299682] (-) TimerEvent: {}
+[0.400210] (-) TimerEvent: {}
+[0.500690] (-) TimerEvent: {}
+[0.601195] (-) TimerEvent: {}
+[0.701571] (-) TimerEvent: {}
+[0.802011] (-) TimerEvent: {}
+[0.902437] (-) TimerEvent: {}
+[1.002772] (-) TimerEvent: {}
+[1.103183] (-) TimerEvent: {}
+[1.203610] (-) TimerEvent: {}
+[1.304166] (-) TimerEvent: {}
+[1.404709] (-) TimerEvent: {}
+[1.505246] (-) TimerEvent: {}
+[1.605768] (-) TimerEvent: {}
+[1.706286] (-) TimerEvent: {}
+[1.806724] (-) TimerEvent: {}
+[1.907230] (-) TimerEvent: {}
+[2.007618] (-) TimerEvent: {}
+[2.108048] (-) TimerEvent: {}
+[2.208422] (-) TimerEvent: {}
+[2.308819] (-) TimerEvent: {}
+[2.409347] (-) TimerEvent: {}
+[2.509809] (-) TimerEvent: {}
+[2.610424] (-) TimerEvent: {}
+[2.711106] (-) TimerEvent: {}
+[2.811715] (-) TimerEvent: {}
+[2.912290] (-) TimerEvent: {}
+[3.012797] (-) TimerEvent: {}
+[3.113343] (-) TimerEvent: {}
+[3.213829] (-) TimerEvent: {}
+[3.314356] (-) TimerEvent: {}
+[3.414897] (-) TimerEvent: {}
+[3.515554] (-) TimerEvent: {}
+[3.616078] (-) TimerEvent: {}
+[3.716655] (-) TimerEvent: {}
+[3.817320] (-) TimerEvent: {}
+[3.917856] (-) TimerEvent: {}
+[4.018376] (-) TimerEvent: {}
+[4.118972] (-) TimerEvent: {}
+[4.219514] (-) TimerEvent: {}
+[4.320063] (-) TimerEvent: {}
+[4.420724] (-) TimerEvent: {}
+[4.521154] (-) TimerEvent: {}
+[4.621494] (-) TimerEvent: {}
+[4.721874] (-) TimerEvent: {}
+[4.822325] (-) TimerEvent: {}
+[4.922825] (-) TimerEvent: {}
+[5.023362] (-) TimerEvent: {}
+[5.123710] (-) TimerEvent: {}
+[5.224130] (-) TimerEvent: {}
+[5.324578] (-) TimerEvent: {}
+[5.425095] (-) TimerEvent: {}
+[5.525558] (-) TimerEvent: {}
+[5.626073] (-) TimerEvent: {}
+[5.726596] (-) TimerEvent: {}
+[5.827048] (-) TimerEvent: {}
+[5.927546] (-) TimerEvent: {}
+[6.028041] (-) TimerEvent: {}
+[6.128433] (-) TimerEvent: {}
+[6.228872] (-) TimerEvent: {}
+[6.329331] (-) TimerEvent: {}
+[6.429964] (-) TimerEvent: {}
+[6.530449] (-) TimerEvent: {}
+[6.630848] (-) TimerEvent: {}
+[6.731408] (-) TimerEvent: {}
+[6.831933] (-) TimerEvent: {}
+[6.932495] (-) TimerEvent: {}
+[7.032865] (-) TimerEvent: {}
+[7.133298] (-) TimerEvent: {}
+[7.233727] (-) TimerEvent: {}
+[7.334251] (-) TimerEvent: {}
+[7.434745] (-) TimerEvent: {}
+[7.535273] (-) TimerEvent: {}
+[7.635754] (-) TimerEvent: {}
+[7.736302] (-) TimerEvent: {}
+[7.836765] (-) TimerEvent: {}
+[7.937274] (-) TimerEvent: {}
+[8.037814] (-) TimerEvent: {}
+[8.138316] (-) TimerEvent: {}
+[8.238766] (-) TimerEvent: {}
+[8.339156] (-) TimerEvent: {}
+[8.439473] (-) TimerEvent: {}
+[8.539814] (-) TimerEvent: {}
+[8.640206] (-) TimerEvent: {}
+[8.740686] (-) TimerEvent: {}
+[8.841220] (-) TimerEvent: {}
+[8.941707] (-) TimerEvent: {}
+[9.042162] (-) TimerEvent: {}
+[9.142609] (-) TimerEvent: {}
+[9.242995] (-) TimerEvent: {}
+[9.343335] (-) TimerEvent: {}
+[9.443792] (-) TimerEvent: {}
+[9.544359] (-) TimerEvent: {}
+[9.644812] (-) TimerEvent: {}
+[9.745367] (-) TimerEvent: {}
+[9.845867] (-) TimerEvent: {}
+[9.946274] (-) TimerEvent: {}
+[10.046811] (-) TimerEvent: {}
+[10.147421] (-) TimerEvent: {}
+[10.247986] (-) TimerEvent: {}
+[10.348535] (-) TimerEvent: {}
+[10.449152] (-) TimerEvent: {}
+[10.549614] (-) TimerEvent: {}
+[10.650048] (-) TimerEvent: {}
+[10.750419] (-) TimerEvent: {}
+[10.850821] (-) TimerEvent: {}
+[10.951278] (-) TimerEvent: {}
+[11.051744] (-) TimerEvent: {}
+[11.152258] (-) TimerEvent: {}
+[11.252802] (-) TimerEvent: {}
+[11.353361] (-) TimerEvent: {}
+[11.453809] (-) TimerEvent: {}
+[11.554306] (-) TimerEvent: {}
+[11.654752] (-) TimerEvent: {}
+[11.755263] (-) TimerEvent: {}
+[11.855703] (-) TimerEvent: {}
+[11.956221] (-) TimerEvent: {}
+[12.056718] (-) TimerEvent: {}
+[12.157081] (-) TimerEvent: {}
+[12.257414] (-) TimerEvent: {}
+[12.357810] (-) TimerEvent: {}
+[12.458279] (-) TimerEvent: {}
+[12.558689] (-) TimerEvent: {}
+[12.659211] (-) TimerEvent: {}
+[12.759721] (-) TimerEvent: {}
+[12.860187] (-) TimerEvent: {}
+[12.960517] (-) TimerEvent: {}
+[13.060936] (-) TimerEvent: {}
+[13.161362] (-) TimerEvent: {}
+[13.261767] (-) TimerEvent: {}
+[13.362224] (-) TimerEvent: {}
+[13.462664] (-) TimerEvent: {}
+[13.563369] (-) TimerEvent: {}
+[13.663869] (-) TimerEvent: {}
+[13.764301] (-) TimerEvent: {}
+[13.864721] (-) TimerEvent: {}
+[13.965176] (-) TimerEvent: {}
+[14.065506] (-) TimerEvent: {}
+[14.165843] (-) TimerEvent: {}
+[14.266247] (-) TimerEvent: {}
+[14.366628] (-) TimerEvent: {}
+[14.467050] (-) TimerEvent: {}
+[14.567526] (-) TimerEvent: {}
+[14.668021] (-) TimerEvent: {}
+[14.768487] (-) TimerEvent: {}
+[14.868972] (-) TimerEvent: {}
+[14.969473] (-) TimerEvent: {}
+[15.069862] (-) TimerEvent: {}
+[15.170288] (-) TimerEvent: {}
+[15.270793] (-) TimerEvent: {}
+[15.371335] (-) TimerEvent: {}
+[15.471677] (-) TimerEvent: {}
+[15.572109] (-) TimerEvent: {}
+[15.672462] (-) TimerEvent: {}
+[15.772829] (-) TimerEvent: {}
+[15.873206] (-) TimerEvent: {}
+[15.973589] (-) TimerEvent: {}
+[16.073980] (-) TimerEvent: {}
+[16.174457] (-) TimerEvent: {}
+[16.274929] (-) TimerEvent: {}
+[16.375357] (-) TimerEvent: {}
+[16.475921] (-) TimerEvent: {}
+[16.576341] (-) TimerEvent: {}
+[16.676735] (-) TimerEvent: {}
+[16.777192] (-) TimerEvent: {}
+[16.877560] (-) TimerEvent: {}
+[16.977967] (-) TimerEvent: {}
+[17.078397] (-) TimerEvent: {}
+[17.178772] (-) TimerEvent: {}
+[17.279174] (-) TimerEvent: {}
+[17.379501] (-) TimerEvent: {}
+[17.419608] (controller_package) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable controller\x1b[0m\n'}
+[17.479625] (-) TimerEvent: {}
+[17.579974] (-) TimerEvent: {}
+[17.680405] (-) TimerEvent: {}
+[17.780731] (-) TimerEvent: {}
+[17.881148] (-) TimerEvent: {}
+[17.981465] (-) TimerEvent: {}
+[18.081844] (-) TimerEvent: {}
+[18.182339] (-) TimerEvent: {}
+[18.282769] (-) TimerEvent: {}
+[18.304798] (controller_package) StdoutLine: {'line': b'[100%] Built target controller\n'}
+[18.322790] (controller_package) CommandEnded: {'returncode': 0}
+[18.360669] (controller_package) JobProgress: {'identifier': 'controller_package', 'progress': 'install'}
+[18.373299] (controller_package) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/aruz/Final_Motion/controller/build/controller_package'], 'cwd': '/home/aruz/Final_Motion/controller/build/controller_package', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'aruz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/aruz/webots_ws/install/my_package/lib:/home/aruz/ros2_ws/install/turtlesim/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/aruz/.ros/webotsR2023b/webots/lib/controller:/opt/ros/jazzy/lib/controller', 'HOME': '/home/aruz', 'OLDPWD': '/home/aruz', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3031', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/aruz/Final_Motion/controller/install:/home/aruz/webots_ws/install:/home/aruz/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'aruz', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'aruz', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aruz-OMEN-by-HP-Gaming-Laptop-16-wf1xxx:@/tmp/.ICE-unix/2782,unix/aruz-OMEN-by-HP-Gaming-Laptop-16-wf1xxx:/tmp/.ICE-unix/2782', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c82a392d_6104_4bc0_8453_2b8a7c4be3dc', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.128', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/aruz/Final_Motion/controller/install/controller_package:/home/aruz/webots_ws/install/my_package:/home/aruz/ros2_ws/install/turtlesim:/home/aruz/ros2_ws/install/trial_pkg:/home/aruz/ros2_ws/install/my_package:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'WEBOTS_HOME': '/home/aruz/.ros/webotsR2023b/webots/', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/aruz/Final_Motion/controller/build/controller_package', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/aruz/ros2_ws/install/turtlesim/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/aruz/Final_Motion/controller/install/controller_package:/home/aruz/webots_ws/install/my_package:/home/aruz/ros2_ws/install/turtlesim:/home/aruz/ros2_ws/install/trial_pkg:/home/aruz/ros2_ws/install/my_package:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[18.382945] (-) TimerEvent: {}
+[18.383795] (controller_package) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.384106] (controller_package) StdoutLine: {'line': b'-- Installing: /home/aruz/Final_Motion/controller/install/controller_package/lib/controller_package/controller\n'}
+[18.391752] (controller_package) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/aruz/Final_Motion/controller/install/controller_package/lib/controller_package/controller" to ""\n'}
+[18.392045] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/ament_index/resource_index/package_run_dependencies/controller_package\n'}
+[18.392421] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/ament_index/resource_index/parent_prefix_path/controller_package\n'}
+[18.392556] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.sh\n'}
+[18.392642] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/environment/ament_prefix_path.dsv\n'}
+[18.392727] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/environment/path.sh\n'}
+[18.392806] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/environment/path.dsv\n'}
+[18.392884] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/local_setup.bash\n'}
+[18.392959] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/local_setup.sh\n'}
+[18.393035] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/local_setup.zsh\n'}
+[18.393111] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/local_setup.dsv\n'}
+[18.393204] (controller_package) StdoutLine: {'line': b'-- Installing: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/package.dsv\n'}
+[18.393281] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/ament_index/resource_index/packages/controller_package\n'}
+[18.393371] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig.cmake\n'}
+[18.393447] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/cmake/controller_packageConfig-version.cmake\n'}
+[18.393527] (controller_package) StdoutLine: {'line': b'-- Up-to-date: /home/aruz/Final_Motion/controller/install/controller_package/share/controller_package/package.xml\n'}
+[18.394644] (controller_package) CommandEnded: {'returncode': 0}
+[18.452377] (controller_package) JobEnded: {'identifier': 'controller_package', 'rc': 0}
+[18.453613] (-) EventReactorShutdown: {}

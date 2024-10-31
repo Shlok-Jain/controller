@@ -8,8 +8,8 @@
 
 USING_NAMESPACE_ACADO
 
-double current_x = 0.0, target_x = 1.0, next_x = 0.0;
-double current_y = 0.0, target_y = 0.0, next_y = 0.0;
+double current_x = 0.0, target_x =0, next_x = 0.0;
+double current_y = 0.0, target_y = 0, next_y = 0.0;
 double current_theta = 0.0, target_theta = 0.0, next_theta = 0.0;
 double current_vx = 0.0, target_vx = 0.0, next_vx = 0.0;
 double current_vy = 0.0, target_vy = 0.0, next_vy = 0.0;
@@ -55,6 +55,8 @@ public:
     // Callback for subscriber 1
     void callback_1(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
     {
+
+    
 	current_x = msg->data[0];
 	current_y = msg->data[1];
 	current_theta = msg->data[2];
@@ -62,6 +64,18 @@ public:
 	// current_vy = msg->data[4];
 	// current_omega = msg->data[5];
 	
+
+    if(abs(target_x-current_x)<0.2 && abs(target_y-current_y)<0.2  && abs(current_theta-target_theta)<0.2){
+        geometry_msgs::msg::Twist twist_msg;
+            twist_msg.linear.x = 0;
+	        twist_msg.linear.y = 0;
+            twist_msg.angular.z = current_omega;
+        publisher_->publish(twist_msg);
+        std::cout<<"BOT stopped"<<std::endl;
+        return ;
+    }
+
+
 	current_vx = next_vx;
 	current_vy = next_vy;
 	current_omega = current_omega;
@@ -96,9 +110,9 @@ public:
 
         // Final state constraints towards target (moving only in x-direction)
         ocp.subjectTo(AT_END, x == target_x);   // Target position in x
-        ocp.subjectTo(AT_END, vx == target_y);       // Stop at the target
-        ocp.subjectTo(AT_END, y == target_theta);
-        ocp.subjectTo(AT_END, theta == target_vx);
+        ocp.subjectTo(AT_END, y == target_y);       // Stop at the target
+        ocp.subjectTo(AT_END, theta == target_theta);
+        ocp.subjectTo(AT_END, vx == target_vx);
         ocp.subjectTo(AT_END, vy == target_vy);
         ocp.subjectTo(AT_END, omega == target_omega);
 	
@@ -145,7 +159,7 @@ public:
     // Callback for subscriber 2
     void callback_2(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
     {
-        target_x = msg->data[0];
+    target_x = msg->data[0];
 	target_y = msg->data[1];
 	target_theta = msg->data[2];
 	target_vx = msg->data[3];
