@@ -32,6 +32,7 @@ include_directories(
 
 add_executable(controller src/controller.cpp)
 
+
 target_link_libraries(controller
   ${OMPL_LIBRARIES}
   ${OpenCV_LIBRARIES}
@@ -47,6 +48,7 @@ target_include_directories(controller PUBLIC
 target_compile_features(controller PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 ament_target_dependencies(
   controller
+  
   "rclcpp"
   "std_msgs"
   "geometry_msgs"
@@ -56,6 +58,7 @@ ament_target_dependencies(
 
 install(TARGETS
   controller
+  
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
