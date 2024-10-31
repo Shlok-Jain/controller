@@ -33,3 +33,6 @@ source install/local_setup.bash
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ros2 run controller_package controller
 ```
+
+## Issues :
+The controller stops working/crashes if target x or y coordinates is made > 0.5  and  if theta >0.3 or 0.4
