@@ -20,7 +20,7 @@ int main() {
     double current_vx = 0.0, current_vy = 0.0, current_omega = 0.0;
 
     // Differential Equation
-    DifferentialEquation f(0.0, dt);
+    DifferentialEquation f(0.0, T);
     f << dot(x) == vx;
     f << dot(y) == vy;
     f << dot(theta) == omega;
@@ -30,7 +30,7 @@ int main() {
 
     while (1) {
         // Set up the OCP for one iteration
-        OCP ocp(0.0, dt);
+        OCP ocp(0.0, T);
         ocp.minimizeMayerTerm(T);
         ocp.subjectTo(f);
         
@@ -60,9 +60,9 @@ int main() {
         ocp.subjectTo(AT_START, omega == current_omega);
 
         // Final state constraints towards target (moving only in x-direction)
-        ocp.subjectTo(AT_END, x == 0.0);   // Target position in x
+        ocp.subjectTo(AT_END, x == 0.5);   // Target position in x
         ocp.subjectTo(AT_END, vx == 0.0);       // Stop at the target
-        ocp.subjectTo(AT_END, y == 1.0);
+        ocp.subjectTo(AT_END, y == 0.0);
         ocp.subjectTo(AT_END, theta == 0.0);
         ocp.subjectTo(AT_END, vy == 0.0);
         ocp.subjectTo(AT_END, omega == 0.0);
@@ -94,6 +94,9 @@ int main() {
         std::cout << "Current State -> X: " << current_x << ", Y: " << current_y
                   << ", Theta: " << current_theta << ", Vx: " << current_vx
                   << ", Vy: " << current_vy << ", Omega: " << current_omega << std::endl;
+	std::cout << "Next State -> X: " << next_state(0) << ", Y: " << next_state(1)
+                  << ", Theta: " << next_state(2) << ", Vx: " << next_state(3)
+                  << ", Vy: " << next_state(4) << ", Omega: " << next_state(5) << std::endl;
 
     }
 

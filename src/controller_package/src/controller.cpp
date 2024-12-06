@@ -14,6 +14,9 @@ double current_theta = 0.0, target_theta = 0.0, next_theta = 0.0;
 double current_vx = 0.0, target_vx = 0.0, next_vx = 0.0;
 double current_vy = 0.0, target_vy = 0.0, next_vy = 0.0;
 double current_omega = 0.0, target_omega = 0.0, next_omega = 0.0;
+double speed = 0.0;
+double idx = 0.0;
+double path_size = 0.0;
 
 // Differential States and Controls
 DifferentialState x, y, theta, vx, vy, omega;
@@ -25,7 +28,7 @@ double R = 0.05;
 double d = 0.5;
 double dt = 2.0; // time step for each iteration
 
-DifferentialEquation f(0.0, dt);
+DifferentialEquation f(0.0, T);
 
 class MyRobotNode : public rclcpp::Node
 {
@@ -51,46 +54,53 @@ public:
 	f << dot(omega) == alpha;
     }
 
-// private:
     // Callback for subscriber 1
     void callback_1(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
     {
-
-    
 	current_x = msg->data[0];
 	current_y = msg->data[1];
 	current_theta = msg->data[2];
 	// current_vx = msg->data[3];
 	// current_vy = msg->data[4];
 	// current_omega = msg->data[5];
-	
-
-    if(abs(target_x-current_x)<0.2 && abs(target_y-current_y)<0.2  && abs(current_theta-target_theta)<0.2){
-        geometry_msgs::msg::Twist twist_msg;
-            twist_msg.linear.x = 0;
-	        twist_msg.linear.y = 0;
-            twist_msg.angular.z = current_omega;
-        publisher_->publish(twist_msg);
-        std::cout<<"BOT stopped"<<std::endl;
-        return ;
-    }
-
+	speed = msg->data[6];
+	idx = msg->data[7];
+	path_size = msg->data[8];
 
 	current_vx = next_vx;
 	current_vy = next_vy;
-	current_omega = current_omega;
+	current_omega = next_omega;
 	
 	std::cout << "data recieved" << std::endl;
 
 	// Set up the OCP for one iteration
-        OCP ocp(0.0, dt);
+        OCP ocp(0.0, T);
         ocp.minimizeMayerTerm(T);
         ocp.subjectTo(f);
 
         // State and control constraints
-        ocp.subjectTo(-1.0 <= vx <= 1.0);
-        ocp.subjectTo(-1.0 <= vy <= 1.0);
-        ocp.subjectTo(-0.5 <= omega <= 0.5);
+        ocp.subjectTo(-0.5 <= vx <= 0.5);
+        ocp.subjectTo(-0.5 <= vy <= 0.5);
+	
+	/* ocp.subjectTo(-speed <= vx <= speed);
+        ocp.subjectTo(-speed <= vy <= speed); */
+
+	/* ocp.subjectTo(-abs(target_vx) <= vx <= abs(target_vx));
+	ocp.subjectTo(-abs(target_vy) <= vy <= abs(target_vy)); */
+	
+	/* if (idx >= path_size - 3) {
+		ocp.subjectTo(-0.1 <= vx <= 0.1);
+		ocp.subjectTo(-0.1 <= vy <= 0.1);
+	} else if (idx >= path_size - 7) {
+                ocp.subjectTo(-0.2 <= vx <= 0.2);
+                ocp.subjectTo(-0.2 <= vy <= 0.2);
+        } else {
+                ocp.subjectTo(-0.4 <= vx <= 0.4);
+                ocp.subjectTo(-0.4 <= vy <= 0.4);
+        }*/
+
+        ocp.subjectTo(-0.8 <= omega <= 0.8);
+	// ocp.subjectTo(0.0 <= vx*vx + vy*vy <= speed*speed);
         ocp.subjectTo(-1.0 <= ax <= 1.0);
         ocp.subjectTo(-1.0 <= ay <= 1.0);
         ocp.subjectTo(-0.5 <= alpha <= 0.5);
@@ -112,9 +122,12 @@ public:
         ocp.subjectTo(AT_END, x == target_x);   // Target position in x
         ocp.subjectTo(AT_END, y == target_y);       // Stop at the target
         ocp.subjectTo(AT_END, theta == target_theta);
-        ocp.subjectTo(AT_END, vx == target_vx);
+        /* ocp.subjectTo(AT_END, vx == target_vx);
         ocp.subjectTo(AT_END, vy == target_vy);
-        ocp.subjectTo(AT_END, omega == target_omega);
+        ocp.subjectTo(AT_END, omega == target_omega); */
+	ocp.subjectTo(AT_END, vx == 0);
+        ocp.subjectTo(AT_END, vy == 0);
+        ocp.subjectTo(AT_END, omega == 0);
 	
 	std::cout << "Target State -> X: " << target_x << ", Y: " << target_y
                   << ", Theta: " << target_theta << ", Vx: " << target_vx
@@ -128,6 +141,7 @@ public:
 	}
 	else {
 		std::cout << "Algorithm not solved" << std::endl;
+		return;
 	}
 
 	// Extract solution
@@ -148,7 +162,18 @@ public:
                   << ", Theta: " << next_theta << ", Vx: " << next_vx
                   << ", Vy: " << next_vy << ", Omega: " << next_omega << std::endl;
 
-        // Publish the Twist message
+        if((target_x-current_x)*(target_x-current_x) + (target_y-current_y)*(target_y-current_y) < 0.2*0.2){
+        	geometry_msgs::msg::Twist twist_msg;
+        	twist_msg.linear.x = 0;
+        	twist_msg.linear.y = 0;
+		if (abs(target_theta-current_theta) < 0.05) twist_msg.angular.z = 0;
+		else twist_msg.angular.z = next_omega;
+        	publisher_->publish(twist_msg);
+        	std::cout<<"Bot stopped, next_omega = "<< next_omega <<std::endl;
+        	return;
+    	}
+	
+	// Publish the Twist message
 	geometry_msgs::msg::Twist twist_msg;
         twist_msg.linear.x = next_vx;
 	twist_msg.linear.y = next_vy;
@@ -159,7 +184,7 @@ public:
     // Callback for subscriber 2
     void callback_2(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
     {
-    target_x = msg->data[0];
+	target_x = msg->data[0];
 	target_y = msg->data[1];
 	target_theta = msg->data[2];
 	target_vx = msg->data[3];

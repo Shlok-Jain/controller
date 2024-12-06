@@ -31,7 +31,7 @@ include_directories(
 )
 
 add_executable(controller src/controller.cpp)
-
+# add_executable(controller src/tester.cpp)
 
 target_link_libraries(controller
   ${OMPL_LIBRARIES}
