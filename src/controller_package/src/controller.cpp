@@ -54,24 +54,16 @@ public:
 	f << dot(omega) == alpha;
     }
 
-    // Callback for subscriber 1
+    // Callback for o1_data from simulation
     void callback_1(const std_msgs::msg::Float32MultiArray::SharedPtr msg)
     {
 	current_x = msg->data[0];
 	current_y = msg->data[1];
 	current_theta = msg->data[2];
-	// current_vx = msg->data[3];
-	// current_vy = msg->data[4];
-	// current_omega = msg->data[5];
-	speed = msg->data[6];
-	idx = msg->data[7];
-	path_size = msg->data[8];
-
+	
 	current_vx = next_vx;
 	current_vy = next_vy;
 	current_omega = next_omega;
-	
-	std::cout << "data recieved" << std::endl;
 
 	// Set up the OCP for one iteration
         OCP ocp(0.0, T);
@@ -81,26 +73,7 @@ public:
         // State and control constraints
         ocp.subjectTo(-0.5 <= vx <= 0.5);
         ocp.subjectTo(-0.5 <= vy <= 0.5);
-	
-	/* ocp.subjectTo(-speed <= vx <= speed);
-        ocp.subjectTo(-speed <= vy <= speed); */
-
-	/* ocp.subjectTo(-abs(target_vx) <= vx <= abs(target_vx));
-	ocp.subjectTo(-abs(target_vy) <= vy <= abs(target_vy)); */
-	
-	/* if (idx >= path_size - 3) {
-		ocp.subjectTo(-0.1 <= vx <= 0.1);
-		ocp.subjectTo(-0.1 <= vy <= 0.1);
-	} else if (idx >= path_size - 7) {
-                ocp.subjectTo(-0.2 <= vx <= 0.2);
-                ocp.subjectTo(-0.2 <= vy <= 0.2);
-        } else {
-                ocp.subjectTo(-0.4 <= vx <= 0.4);
-                ocp.subjectTo(-0.4 <= vy <= 0.4);
-        }*/
-
         ocp.subjectTo(-0.8 <= omega <= 0.8);
-	// ocp.subjectTo(0.0 <= vx*vx + vy*vy <= speed*speed);
         ocp.subjectTo(-1.0 <= ax <= 1.0);
         ocp.subjectTo(-1.0 <= ay <= 1.0);
         ocp.subjectTo(-0.5 <= alpha <= 0.5);
@@ -157,12 +130,20 @@ public:
         next_vy = next_state(4);
 	next_omega = next_state(5);
 
+	if (idx >= path_size - 1) {
+		next_vx /= 3.0;
+		next_vy /= 3.0;
+	} else if (idx >= path_size - 3) {
+		next_vx /= 1.5;
+		next_vx /= 1.5;
+	}
+
 	// Log the state
         std::cout << "Next State -> X: " << next_x << ", Y: " << next_y
                   << ", Theta: " << next_theta << ", Vx: " << next_vx
                   << ", Vy: " << next_vy << ", Omega: " << next_omega << std::endl;
 
-        if((target_x-current_x)*(target_x-current_x) + (target_y-current_y)*(target_y-current_y) < 0.2*0.2){
+        if((target_x-current_x)*(target_x-current_x) + (target_y-current_y)*(target_y-current_y) < 0.1*0.1){
         	geometry_msgs::msg::Twist twist_msg;
         	twist_msg.linear.x = 0;
         	twist_msg.linear.y = 0;
@@ -190,6 +171,9 @@ public:
 	target_vx = msg->data[3];
 	target_vy = msg->data[4];
 	target_omega = msg->data[5];
+	speed = msg->data[6];
+        idx = msg->data[7];
+        path_size = msg->data[8];
     }
 
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
