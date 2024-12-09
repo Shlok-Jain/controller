@@ -1,6 +1,0 @@
-[0.028s] Invoking command in '/home/debraj/Documents/controller/build/controller_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/debraj/Documents/controller/build/controller_package -- -j8 -l8
-[0.171s] [ 50%] [32mBuilding CXX object CMakeFiles/controller.dir/src/tester.cpp.o[0m
-[1.003s] gmake[2]: *** [CMakeFiles/controller.dir/build.make:76: CMakeFiles/controller.dir/src/tester.cpp.o] Interrupt
-[1.004s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/controller.dir/all] Interrupt
-[1.005s] gmake: *** [Makefile:146: all] Interrupt
-[1.017s] Invoked command in '/home/debraj/Documents/controller/build/controller_package' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/debraj/Documents/controller/build/controller_package -- -j8 -l8
