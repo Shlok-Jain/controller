@@ -73,7 +73,7 @@ public:
         // State and control constraints
         ocp.subjectTo(-0.5 <= vx <= 0.5);
         ocp.subjectTo(-0.5 <= vy <= 0.5);
-        ocp.subjectTo(-0.8 <= omega <= 0.8);
+        ocp.subjectTo(-1.0 <= omega <= 1.0);
         ocp.subjectTo(-1.0 <= ax <= 1.0);
         ocp.subjectTo(-1.0 <= ay <= 1.0);
         ocp.subjectTo(-0.5 <= alpha <= 0.5);
@@ -95,9 +95,6 @@ public:
         ocp.subjectTo(AT_END, x == target_x);   // Target position in x
         ocp.subjectTo(AT_END, y == target_y);       // Stop at the target
         ocp.subjectTo(AT_END, theta == target_theta);
-        /* ocp.subjectTo(AT_END, vx == target_vx);
-        ocp.subjectTo(AT_END, vy == target_vy);
-        ocp.subjectTo(AT_END, omega == target_omega); */
 	ocp.subjectTo(AT_END, vx == 0);
         ocp.subjectTo(AT_END, vy == 0);
         ocp.subjectTo(AT_END, omega == 0);
@@ -130,12 +127,25 @@ public:
         next_vy = next_state(4);
 	next_omega = next_state(5);
 
+	if (speed < 0.4) {
+		next_vx *= (5.0/6.0);
+		next_vy *= (5.0/6.0);
+	} else if (speed < 0.5) {
+		next_vx *= (5.5/6.0);
+		next_vy *= (5.5/6.0);
+	}
+	
+	
 	if (idx >= path_size - 1) {
-		next_vx /= 3.0;
-		next_vy /= 3.0;
-	} else if (idx >= path_size - 3) {
 		next_vx /= 1.5;
-		next_vx /= 1.5;
+		next_vy /= 1.5;
+	} else if (idx >= path_size - 2) {
+		next_vx /= 1.2;
+		next_vx /= 1.2;
+	}
+	else if (idx >= path_size - 3) {
+		next_vx /= 1.1;
+		next_vx /= 1.1;
 	}
 
 	// Log the state
