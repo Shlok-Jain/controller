@@ -36,7 +36,7 @@ public:
     MyRobotNode() : Node("my_robot_node")
     {
         // Publisher for cmd_vel (Twist)
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/O1/cmd_vel", 10);
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/o1/cmd_vel", 10);
 
         // Subscriber 1 for Float32MultiArray
         o1_subscription_ = this->create_subscription<std_msgs::msg::Float32MultiArray>(
@@ -73,7 +73,7 @@ public:
         // State and control constraints
         ocp.subjectTo(-0.5 <= vx <= 0.5);
         ocp.subjectTo(-0.5 <= vy <= 0.5);
-        ocp.subjectTo(-1.0 <= omega <= 1.0);
+        ocp.subjectTo(-1.0 <= omega <= 1.0);  // for python
         ocp.subjectTo(-1.0 <= ax <= 1.0);
         ocp.subjectTo(-1.0 <= ay <= 1.0);
         ocp.subjectTo(-0.5 <= alpha <= 0.5);
@@ -157,8 +157,15 @@ public:
         	geometry_msgs::msg::Twist twist_msg;
         	twist_msg.linear.x = 0;
         	twist_msg.linear.y = 0;
-		if (abs(target_theta-current_theta) < 0.05) twist_msg.angular.z = 0;
-		else twist_msg.angular.z = next_omega;
+		if (abs(target_theta - current_theta) < 0.05) {
+			twist_msg.angular.z = 0;
+			next_omega = 0;
+		} else if (abs(target_theta - current_theta) < 0.15) {
+			twist_msg.angular.z = next_omega / 2;
+			next_omega /= 2;
+		} else {
+			twist_msg.angular.z = next_omega;
+		}
         	publisher_->publish(twist_msg);
         	std::cout<<"Bot stopped, next_omega = "<< next_omega <<std::endl;
         	return;
