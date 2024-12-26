@@ -44,7 +44,7 @@ public:
 
         // Subscriber 2 for Float32MultiArray
         target_subscription_ = this->create_subscription<std_msgs::msg::Float32MultiArray>(
-            "target_pos", 10, std::bind(&MyRobotNode::callback_2, this, std::placeholders::_1));
+            "/o1/target_pos", 10, std::bind(&MyRobotNode::callback_2, this, std::placeholders::_1));
 
 	f << dot(x) == vx;
 	f << dot(y) == vy;
